@@ -6,6 +6,11 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
+// Note: The following contract is a simplified version of a token marketplace for demonstration purposes. It allows users to buy and sell GLD tokens at a dynamic price based on market demand. The contract owner can also withdraw excess tokens and accumulated Ether.
+// This contract is currently under development.
+// Compilation issues related to OpenZeppelin version compatibility
+// will be resolved in a future update.
+
 contract TokenMarketPlace is Ownable {
 
     using SafeERC20 for IERC20;
