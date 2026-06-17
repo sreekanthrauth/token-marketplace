@@ -51,12 +51,11 @@ contract TokenMarketPlace is Ownable {
 
         // Set a minimum price to prevent it from dropping too low
         uint256 minimumPrice = 1e15; // 0.001 ether as minimum price
-        if (newTokenPrice < minimumPrice) {
-            newTokenPrice = minimumPrice;
+        if(newTokenPrice < minimumPrice){
+            tokenPrice = minimumPrice;
+        } else {
+            tokenPrice = newTokenPrice;
         }
-         
-        tokenPrice = newTokenPrice;
-        console.log("tokenPrice",tokenPrice);
     }
 
     // Buy tokens from the marketplace
